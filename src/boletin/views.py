@@ -9,8 +9,8 @@ def inicio(request):
     if form.is_valid():
         print form.cleaned_data
         form_data = form.cleaned_data
-        print form_data.get("nombre")
-        print form_data.get("edad")
+        email = form_data.get("email")
+        #print form_data.get("edad")
     context = {
         "el_form": form
     }

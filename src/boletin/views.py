@@ -4,7 +4,13 @@ from .forms import RegForm
 
 # Create your views here.
 def inicio(request):
-    form = RegForm()
+    form = RegForm(request.POST or None)
+    print (dir(form)) #ver los metodos a utilizar del formulario
+    if form.is_valid():
+        print form.cleaned_data
+        form_data = form.cleaned_data
+        print form_data.get("nombre")
+        print form_data.get("edad")
     context = {
         "el_form": form
     }

@@ -8,8 +8,10 @@
 </head>
 <body>
     <h1>Hola django</h1>
+    <form method="POST" action="">{% csrf_token %}
+        {{ el_form }}
+        <input type="submit" value="registrame">
+    </form>
 
-    {{ el_form }}
-    
 </body>
 </html>

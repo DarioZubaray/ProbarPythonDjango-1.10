@@ -91,4 +91,6 @@ python manage.py shell
     
     gente
     <QuerySet [<Registrado: dario@email.com>]>
+    
+    quit()
 ```

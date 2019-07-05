@@ -14,6 +14,10 @@ class RegModelForm(forms.ModelForm):
         if not "edu" in email_extension:
             raise forms.ValidationError("Por favor ingrese un correo edu")
         return emailForm
+    
+    def clean_nombre(self):
+        nombre = self.cleaned_data.get("nombre")
+        return nombre
 
 class RegForm(forms.Form):
     nombre = forms.CharField(max_length=100)

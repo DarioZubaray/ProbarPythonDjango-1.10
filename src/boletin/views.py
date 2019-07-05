@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from .forms import RegForm, RegModelForm
+from .forms import RegModelForm, ContactForm
 from .models import Registrado
 
 # Create your views here.
@@ -40,4 +40,10 @@ def inicio(request):
         #registrado.save()
     
     return render(request, 'inicio.html', context)
-    
+
+def contacto(request):
+    form = ContactForm(request.POST or None)
+    context = {
+        "form": form
+    }
+    return render(request, "contacto.html", context)

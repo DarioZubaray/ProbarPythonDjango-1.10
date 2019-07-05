@@ -8,10 +8,12 @@
 </head>
 <body>
     <h1>{{ el_titulo }}</h1>
+    {% if form %}
     <form method="POST" action="">{% csrf_token %}
         {{ el_form.as_p }}
         <input type="submit" value="registrame">
     </form>
+    {% endif %}
 
 </body>
 </html>

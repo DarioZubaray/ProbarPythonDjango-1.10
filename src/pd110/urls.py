@@ -15,7 +15,8 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-
+from django.config import settings
+from django.config.urls.static import static
 from boletin import views
 
 urlpatterns = [
@@ -23,3 +24,8 @@ urlpatterns = [
     url(r'^$', views.inicio, name='inicio'),
     url(r'^contacto/$', views.contacto, name='contacto')
 ]
+
+if settings.DEBUG:
+    urlpattern += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpattern += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+

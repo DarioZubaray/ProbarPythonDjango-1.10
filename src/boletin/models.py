@@ -11,3 +11,11 @@ class Registrado(models.Model):
 
 	def __str__(self): #Python 3
 		return self.email
+
+class Contactado(models.Model):
+	nombre = models.CharField(max_length=100, blank=True, null=True)
+	email = models.EmailField()
+	mensaje = models.CharField(max_length=400)
+
+	def __str__(self):
+		return self.email + " " + self.mensaje

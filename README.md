@@ -94,3 +94,7 @@ python manage.py shell
     
     quit()
 ```
+### enviar archivos estaticos al servidor
+```
+python manage.py collectstatic
+```

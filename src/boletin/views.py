@@ -41,7 +41,7 @@ def inicio(request):
         #registrado.email = emailForm
         #registrado.save()
     
-    return render(request, 'base.html', context)
+    return render(request, 'inicio.html', context)
 
 def contacto(request):
     form = ContactForm(request.POST or None)

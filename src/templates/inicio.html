@@ -1,19 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{ el_titulo }}</title>
-</head>
-<body>
-    <h1>{{ el_titulo }}</h1>
-    {% if form %}
-    <form method="POST" action="">{% csrf_token %}
-        {{ el_form.as_p }}
-        <input type="submit" value="registrame">
-    </form>
-    {% endif %}
+{% extends "base.html" %}
 
-</body>
-</html>
+{% block header_title %}Bienvenidos | {{ block.super}} {% endblock %}
+
+{% block jumbotron %}
+<div class="jumbotron">
+    <h1>{{ el_titulo }}</h1>
+    <p class="lead">This example is a quick exercise to illustrate how the top-aligned navbar works. As you scroll, this navbar remains in its original position and moves with the rest of the page.</p>
+    <a class="btn btn-lg btn-primary" href="/docs/4.3/components/navbar/" role="button">View navbar docs &raquo;</a>
+</div>
+{% endblock %}
+
+{% block content %}
+<form method="POST" action="">{% csrf_token %}
+    {{ el_form.as_p }}
+    <input type="submit" value="registrame">
+</form>
+{% endblock %}

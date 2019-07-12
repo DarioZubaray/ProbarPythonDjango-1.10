@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'boletin',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -135,3 +136,5 @@ STATICFILES_DIRS = [
 
 STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_env", "static_root")
 MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_env", "media_root")
+
+CRISPY_TEMPLATE_PACK = 'bootstrap3'

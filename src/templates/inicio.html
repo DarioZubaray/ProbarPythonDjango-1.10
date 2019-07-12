@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load crispy_forms_tags %}
 
 {% block header_title %}Bienvenidos | {{ block.super}} {% endblock %}
 
@@ -12,7 +13,7 @@
 
 {% block content %}
 <form method="POST" action="">{% csrf_token %}
-    {{ el_form.as_p }}
-    <input type="submit" value="registrame">
+    {{ el_form | crispy }}
+    <input class="btn btn-primary" type="submit" value="registrame">
 </form>
 {% endblock %}

@@ -62,7 +62,10 @@ def contacto(request):
             [settings.EMAIL_HOST_USER],
             fail_silently=False,
         )
+
+    titulo_contacto = "Contáctenos!"
     context = {
-        "form": form
+        "form": form,
+        "titulo_contacto": titulo_contacto
     }
     return render(request, "contacto.html", context)

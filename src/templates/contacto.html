@@ -1,6 +1,22 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
 <h1>Contacto</h1>
 
-<form method="POST" action="">{% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="registrame">
-</form>
+{% block content %}
+
+{% if titulo_contacto %}
+<h1 class="text-align-center">{{titulo_contacto}}</h1>
+{% endif %}
+
+<div class="row">
+    <div class="col-sm-offset-3 col-sm-6">
+
+        <form method="POST" action="">{% csrf_token %}
+            {{ form | crispy }}
+            <input class="btn btn-primary" type="submit" value="Enviar">
+        </form>
+
+    </div>
+</div>
+{% endblock %}

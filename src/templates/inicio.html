@@ -12,8 +12,22 @@
 {% endblock %}
 
 {% block content %}
-<form method="POST" action="">{% csrf_token %}
-    {{ el_form | crispy }}
-    <input class="btn btn-primary" type="submit" value="registrame">
-</form>
+<div class="row">
+    <div class="col-sm-3 col-xs-12 float-right">
+        <p class="lead text-align-center">Subscribirse</p>
+        <form method="POST" action="">{% csrf_token %}
+            {{ el_form | crispy }}
+            <input class="btn btn-primary" type="submit" value="registrame">
+        </form>
+    </div>
+    <div class="col-sm-3">
+        <p class="lead text-align-center">Creado con Django & Bootstrap</p>
+    </div>
+    <div class="col-sm-3">
+        <p class="lead text-align-center">Y con mucho amor, claro</p>
+    </div>
+    <div class="col-sm-3">
+        <p class="lead text-align-center">Código abierto siempre</p>
+    </div>
+</div>
 {% endblock %}

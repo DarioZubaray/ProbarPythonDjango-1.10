@@ -18,11 +18,13 @@ from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 from boletin import views
+from .views import about
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.inicio, name='inicio'),
-    url(r'^contacto/$', views.contacto, name='contacto')
+    url(r'^contacto/$', views.contacto, name='contacto'),
+    url(r'^about/$', about, name='about')
 ]
 
 if settings.DEBUG:

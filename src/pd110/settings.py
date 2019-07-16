@@ -142,4 +142,6 @@ MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_env", "media_root")
 
 ACCOUNT_ACTIVATION_DAYS = 7
 REGISTRATION_AUTO_LOGIN = True
+SITE_ID = 1
+
 CRISPY_TEMPLATE_PACK = 'bootstrap3'

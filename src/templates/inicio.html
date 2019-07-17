@@ -21,9 +21,16 @@
 {% block jumbotron %}
 <div class="jumbotron">
     <div class="container">
-        <h1>{{ el_titulo }}</h1>
-        <p class="lead">This example is a quick exercise to illustrate how the top-aligned navbar works. As you scroll, this navbar remains in its original position and moves with the rest of the page.</p>
-        <a class="btn btn-lg btn-success" href="/accounts/register/" role="button">Unete &raquo;</a>
+        <div class="row">
+            <div class="col-sm-6">
+                <h1>{{ el_titulo }}</h1>
+                <p class="lead">This example is a quick exercise to illustrate how the top-aligned navbar works. As you scroll, this navbar remains in its original position and moves with the rest of the page.</p>
+                <a class="btn btn-lg btn-success" href="/accounts/register/" role="button">Unete &raquo;</a>
+            </div>
+            <div class="col-sm-6">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ChSvnSv_3aw" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}

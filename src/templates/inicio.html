@@ -3,12 +3,27 @@
 
 {% block header_title %}Bienvenidos | {{ block.super}} {% endblock %}
 
+{% block style %}
+    .jumbotron {
+        color: #fff;
+        background: rgba(73,155,234,1);
+        background: -moz-linear-gradient(left, rgba(73,155,234,1) 0%, rgba(32,124,229,1) 29%, rgba(73,155,234,1) 64%, rgba(32,124,229,1) 95%, rgba(32,124,229,1) 100%);
+        background: -webkit-gradient(left top, right top, color-stop(0%, rgba(73,155,234,1)), color-stop(29%, rgba(32,124,229,1)), color-stop(64%, rgba(73,155,234,1)), color-stop(95%, rgba(32,124,229,1)), color-stop(100%, rgba(32,124,229,1)));
+        background: -webkit-linear-gradient(left, rgba(73,155,234,1) 0%, rgba(32,124,229,1) 29%, rgba(73,155,234,1) 64%, rgba(32,124,229,1) 95%, rgba(32,124,229,1) 100%);
+        background: -o-linear-gradient(left, rgba(73,155,234,1) 0%, rgba(32,124,229,1) 29%, rgba(73,155,234,1) 64%, rgba(32,124,229,1) 95%, rgba(32,124,229,1) 100%);
+        background: -ms-linear-gradient(left, rgba(73,155,234,1) 0%, rgba(32,124,229,1) 29%, rgba(73,155,234,1) 64%, rgba(32,124,229,1) 95%, rgba(32,124,229,1) 100%);
+        background: linear-gradient(to right, rgba(73,155,234,1) 0%, rgba(32,124,229,1) 29%, rgba(73,155,234,1) 64%, rgba(32,124,229,1) 95%, rgba(32,124,229,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#499bea', endColorstr='#207ce5', GradientType=1 );
+    }
+{% endblock %}
+
+
 {% block jumbotron %}
 <div class="jumbotron">
     <div class="container">
         <h1>{{ el_titulo }}</h1>
         <p class="lead">This example is a quick exercise to illustrate how the top-aligned navbar works. As you scroll, this navbar remains in its original position and moves with the rest of the page.</p>
-        <a class="btn btn-lg btn-primary" href="/accounts/register/" role="button">Unete &raquo;</a>
+        <a class="btn btn-lg btn-success" href="/accounts/register/" role="button">Unete &raquo;</a>
     </div>
 </div>
 {% endblock %}
